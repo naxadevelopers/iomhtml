@@ -1,0 +1,91 @@
+/*!Theme Name: Openspace Portal
+Theme URI: http://naxa.com.np
+Author: Prem Prasad Khanal
+Author URI: https://incanix.com
+Description: Openspace portal
+Version: 1.0
+*/
+
+// @import url('https://fonts.googleapis.com/css?family=Mukta:400,500,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Yantramanav:400,500,700,900&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&display=swap');
+ *,
+ ::after,
+ ::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+ }
+ 
+ html {
+    position: relative;
+    font-family: $Hind;
+    min-height: 100%;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent;
+ }
+ 
+ article,
+ aside,
+ figcaption,
+ figure,
+ footer,
+ header,
+ hgroup,
+ main,
+ nav,
+ section {
+     display: block
+ }
+ 
+ body {
+     margin: 0;
+     font-family: $Hind;
+     font-size: 0.875rem;
+     font-weight: 400;
+     line-height: 1.7;
+     letter-spacing: 1px;
+     color: $color-primary;
+     text-align: left;
+     background-color: $color-bg;
+ }
+ 
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+     margin-top: 0;
+     margin-bottom: .5rem;
+     font-family:$Hind;
+     font-weight: 500;
+     line-height: 1.7;
+ }
+
+
+ a {
+     color: $color-primary;
+     text-decoration: none;
+     background-color: transparent;
+     @include anim05;
+ }
+ 
+ a:hover {
+     color: $color-primary;
+     text-decoration: none;
+ }
+ img{
+     max-width: 100%;
+     height: auto;
+ }
+ ul{
+     margin:0;
+     padding:0;
+     list-style: none;
+ }
+ 

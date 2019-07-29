@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SOCIAL MEDIA META -->
+    <meta property="og:description" content="Open Space Portal">
+    <meta property="og:image" content="preview.html">
+    <meta property="og:site_name" content="Open Space Portal">
+    <meta property="og:title" content="Open Space Portal">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://naxa.com.np">
+
+    <!-- TWITTER META -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@Open Space Portal">
+    <meta name="twitter:creator" content="@Open Space Portal">
+    <meta name="twitter:title" content="Open Space Portal">
+    <meta name="twitter:description" content="Open Space Portal">
+    <meta name="twitter:image" content="preview.html">
+
+    <!--title-->
+    <title>OpenSpace Portal</title>
+
+    <!-- faveicon start   -->
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+
+    <!-- stylesheet start -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/lity.min.css">
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="css/aos.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body class="">
+    <!-- OpenSpace header start   -->
+    <header class="site_header sticky-top">
+        <!-- Start Nav -->
+        <div class="headerWrap">
+            <div class="container-fluid">
+                <div class="top-header">
+                    <div class="headLeft">
+                        <!-- <div class="logo">
+                            <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+
+                        </div> -->
+                        <p>मानवीय सहायताका लागि <br /> खुल्ला क्षेत्र पोर्टल</p>
+                    </div>
+
+                    <div class="headRight">
+                        <nav id="site-navigation" class="main-navigation" role="navigation">
+                            <div class="toggle-button">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="menu-primary-container">
+                                <ul id="primary-menu" class="menu nav-menu">
+                                    <li class="menu-item ">
+                                        <a href="index.html">गृह पृष्ठ</a>
+                                    </li>
+                                    <li class="menu-item menu-item-has-current">
+                                        <a href="about.html">हाम्रो बारे</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="open_space.html">खुला ठाउँ खोज्नुहोस्</a>
+                                    </li>
+
+                                    <li class="menu-item">
+                                        <a href="source.html">स्रोतहरू</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="manage.html"> शिविर व्यवस्थापन</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="contact.html">सम्पर्क</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <div class="onoffswitch">
+                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                            <label class="onoffswitch-label" for="myonoffswitch">
+                                <span class="onoffswitch-inner"></span>
+                                <span class="onoffswitch-switch"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <!-- breadcrumb -->
+    <div class="page-wrapper">
+        <section class="inner-banner bg-image section" data-background="img/breadcrumb.jpg">
+            <div class="overlay"></div>
+            <div class="container-fluid">
+                <div class="breadcrumb-content">
+                    <h1 data-aos="fade-up" data-aos-easing="linear" data-aos-offset="50" data-aos-duration="800">खुल्ला
+                        क्षेत्र के हो?</h1>
+                    <p data-aos="fade-up" data-aos-easing="linear" data-aos-offset="50" data-aos-duration="1200">कुनै
+                        पनि
+                        विपद्को समयमा घर भत्किएको या बस्न सुरक्षित नभएको अवस्थामा, विपद् बाट प्रभावित जनसंख्या र
+                        समुदायले आक्समिक आश्रयकालागि खुल्ला क्षेत्रको प्रयोग गर्छन् । </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="about-section bg-grey pdtb-50 section">
+            <div class="container-fluid">
+                <div class="openSpace-title">
+                    <h3>खुल्ला क्षेत्र किन आवश्यक छ?</h3>
+                    <figure>
+                            <img src="img/title_loader.svg" alt="title-loader" />
+                        </figure>
+                    <span>विपद्को समयमा सुरक्षित आवास स्थानको र राहत वितरणकोलागि खुल्ला क्षेत्रको महत्व हुने भएकोले,
+                        उक्त क्षेत्रहरुको पहिचान गर्न अत्यन्तै आवश्यक छ । पहिचान गरिएको खुल्ला क्षेत्रहरुको प्रयोग
+                        विपद्का साथ साथै अन्य प्रयोजनका निम्ति पनि प्रयोग गर्न सकिनेछ ।</span>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="about-item">
+                            <figure>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="306.512" height="216.373"
+                                    viewBox="0 0 306.512 216.373">
+                                    <g id="Group_49" data-name="Group 49" transform="translate(0 0)">
+                                        <path id="Path_104" data-name="Path 104"
+                                            d="M0,0S6.606.054,6.7,1.331c.8,10.712-10.23,83.736,0,96.208s35-17.775,64.868-21.508a118.324,118.324,0,0,1,54.582,6.577s31.915,20.513,31.22,38.007-3.085,23.441-10.823,25.435-88.021,0-88.021,0-33.164.472-38.58,4.509-9.893,30.03,5.561,42,102.806-6.528,115.349,0,16.514,44.025,16.514,44.025"
+                                            transform="translate(297.086 38.027) rotate(90)" fill="none" stroke=""
+                                            stroke-width="3" />
+                                        <g id="Group_48" data-name="Group 48" transform="translate(0 0)">
+                                            <g id="Group_46" data-name="Group 46" transform="translate(284.769 0)">
+                                                <g id="noun_Map_Marker_36302" data-name="noun_Map Marker_36302"
+                                                    transform="translate(0)">
+                                                    <path id="Path_100" data-name="Path 100"
+                                                        d="M39.529,11.473A10.872,10.872,0,0,0,28.657,22.345c0,7.616,10.872,16.95,10.872,22.849,0-5.9,10.872-14.7,10.872-22.849A10.872,10.872,0,0,0,39.529,11.473Zm0,15.9a5.034,5.034,0,1,1,5.034-5.034A5.034,5.034,0,0,1,39.528,27.378Z"
+                                                        transform="translate(-28.657 -11.473)" fill="" />
+                                                    <ellipse id="Ellipse_21" data-name="Ellipse 21" cx="2.341"
+                                                        cy="0.657" rx="2.341" ry="0.657"
+                                                        transform="translate(8.53 33.43)" fill="" />
+                                                    <path id="Path_101" data-name="Path 101"
+                                                        d="M46.94,78.056c.513.3.811.639.811,1,0,1.239-3.428,2.245-7.659,2.248s-7.66-1-7.661-2.237c0-.366.305-.71.836-1.016-2.139.548-3.49,1.348-3.49,2.24,0,1.65,4.618,2.988,10.314,2.988S50.4,81.939,50.4,80.29C50.4,79.4,49.064,78.6,46.94,78.056Z"
+                                                        transform="translate(-29.218 -44.862)" fill="" />
+                                                </g>
+                                            </g>
+                                            <g id="noun_Running_27587" transform="translate(0 129.606)">
+                                                <path id="Path_105" data-name="Path 105"
+                                                    d="M54.672,7.554A7.774,7.774,0,0,1,65.5,5.722c3.505,2.479,3.784,6.754,1.3,10.249s-6.791,4.909-10.287,2.421A7.772,7.772,0,0,1,54.672,7.554Z"
+                                                    transform="translate(-14.971 -4.289)" fill="" />
+                                                <path id="Path_106" data-name="Path 106"
+                                                    d="M83.7,24.325a4.081,4.081,0,0,0-4.6-3.594,4.018,4.018,0,0,0-2.565,1.5l-3.4,4.907-3.351,4.9s-4.752-4.611-6.233-5.811a37.73,37.73,0,0,0-4.83-3.274c-1.875-1.1-6.729-2.286-8.808-2.019l-1.348.2L35.308,23.049a5.9,5.9,0,0,0-4.007,2.9L25.533,36.135a4.62,4.62,0,0,0-.751,3.03A3.819,3.819,0,0,0,29.091,42.2a5.016,5.016,0,0,0,3.2-2.169l5.034-8.184L43.157,31,36.218,46.753c-3.86,6.787,2.079,11.083,4.193,13.195l.741.641L52.1,70.07,44.317,83.341a3.616,3.616,0,0,0-.56,2.094,4.683,4.683,0,0,0,4.612,4.747A4.884,4.884,0,0,0,52.7,87.525l2.018-3.534L61.3,72.457a7.752,7.752,0,0,0-.97-8.146L49.152,53.136l2.984-5.149,6.973-11.95L68.15,41.35a4.253,4.253,0,0,0,6.186-1.321l3.156-4.6,5.071-7.491a.317.317,0,0,0,.028-.048A5.627,5.627,0,0,0,83.7,24.325Z"
+                                                    transform="translate(-13.261 -5.271)" fill="" />
+                                                <path id="Path_107" data-name="Path 107"
+                                                    d="M38.515,64.838l-.74-.644a25.489,25.489,0,0,1-4.1-4.475c-.051-.079-9.5,15.743-9.5,15.743L13.658,86.694a3.622,3.622,0,0,0-1.008,1.92A4.682,4.682,0,0,0,16.1,94.26a4.887,4.887,0,0,0,4.808-1.638l2.747-3,8.962-9.8c2.323-2.838,6.854-9.186,9.033-12.263Z"
+                                                    transform="translate(-12.529 -7.615)" fill="" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </figure>
+                            <h4> विपद्को समयमा प्रयोग गर्न सकिने सुरक्षित स्थान</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="about-item">
+                            <figure>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="366.008" height="170.808"
+                                    viewBox="0 0 366.008 170.808">
+                                    <g id="Group_51" data-name="Group 51" transform="translate(0 0)" opacity="0.9">
+                                        <g id="Group_50" data-name="Group 50" transform="translate(0 0)">
+                                            <path id="Path_112" data-name="Path 112"
+                                                d="M39.129,46c2.526,22.858,11.066,64.3,29.891,71.873V78.709L41.764,46Z"
+                                                transform="translate(199.384 39.405)" fill="" />
+                                            <path id="Path_113" data-name="Path 113"
+                                                d="M73.256,46H72.213c-2.037,19.728-10.7,77.973-42.183,84.714v.689h85.4v-.689C83.956,123.973,75.288,65.728,73.256,46Z"
+                                                transform="translate(152.977 39.405)" fill="" />
+                                            <path id="Path_114" data-name="Path 114"
+                                                d="M57.286,46,30.03,78.709v39.127C48.721,110.1,57.4,68.107,59.909,46.006L57.286,46Z"
+                                                transform="translate(152.977 39.405)" fill="" />
+                                            <path id="Path_115" data-name="Path 115"
+                                                d="M359.944,160.106a6.1,6.1,0,0,0-6.1,6.1v9.675l-44.489-44.489L234.364,56.4l13.988-13.988a6.1,6.1,0,1,0-8.626-8.626L225.738,47.776,211.751,33.789a6.1,6.1,0,1,0-8.626,8.626l7.888,7.888H155.061l7.888-7.888a6.1,6.1,0,0,0-8.626-8.626L140.335,47.776,126.347,33.789a6.1,6.1,0,1,0-8.626,8.626L131.71,56.4s-74.984,74.99-74.99,74.99L12.23,175.881v-9.675a6.1,6.1,0,1,0-12.2,0v24.4a6.248,6.248,0,0,0,4.417,5.856c2.6.756,4.856-.4,6.655-2.2l1.69-1.69,5.844-5.844q4.017-4.017,8.034-8.04,4.465-4.456,8.925-8.925l8.5-8.5q3.386-3.386,6.765-6.765l3.727-3.727.348-.348v46.276a6.1,6.1,0,0,0,6.1,6.1h109.8v-54.9a6.093,6.093,0,0,1,1.415-3.9l30.5-36.6a6.1,6.1,0,0,1,4.685-2.2h36.6a6.118,6.118,0,0,1,4.691,2.2l30.5,36.6a6.121,6.121,0,0,1,1.409,3.9v54.9h24.4a6.1,6.1,0,0,0,6.1-6.1V150.431c.4.4.793.793,1.19,1.183l3.227,3.227q2.388,2.388,4.77,4.77,2.91,2.91,5.826,5.826l6.381,6.381q3.23,3.221,6.448,6.448,3.01,3.011,6.015,6.021,2.553,2.544,5.094,5.094l3.678,3.678c.592.592,1.171,1.184,1.769,1.769a6.3,6.3,0,0,0,6.546,1.482,6.232,6.232,0,0,0,3.953-5.7v-24.4A6.093,6.093,0,0,0,359.944,160.106ZM143.91,129.6H75.764l67.1-67.1h68.146Zm-76.778,12.2h73.2v48.8h-73.2v-48.8Z"
+                                                transform="translate(-0.03 -32)" fill="" />
+                                        </g>
+                                    </g>
+                                </svg>
+
+                            </figure>
+                            <h4> विपद् बाट प्रभावित जनसंख्याकालागि आस्थायी बसोबास</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="about-item">
+                            <figure>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="197.427" height="200.3"
+                                    viewBox="0 0 197.427 200.3">
+                                    <g id="noun_safe_2643871" transform="translate(0 0)" opacity="0.9">
+                                        <path id="Path_116" data-name="Path 116"
+                                            d="M392.6,111.358H376.17v17.986L392.6,141.308Z"
+                                            transform="translate(-212.122 -89.848)" fill="" />
+                                        <path id="Path_117" data-name="Path 117"
+                                            d="M213.4,323.443a50.761,50.761,0,1,0-45.63-28.527A50.759,50.759,0,0,0,213.4,323.443ZM178.32,265.774a3.262,3.262,0,0,1,4.6.362L200.652,286.9,244.3,251.394a3.262,3.262,0,0,1,4.118,5.061L202.3,293.973a3.262,3.262,0,0,1-4.54-.412l-19.8-23.188A3.262,3.262,0,0,1,178.32,265.774Z"
+                                            transform="translate(-114.684 -140.299)" fill="" />
+                                        <path id="Path_118" data-name="Path 118"
+                                            d="M99.524,146.924V272.094h147.25V146.924a3.262,3.262,0,0,1,3.262-3.262h21.826L173.149,71.794,74.436,143.662H96.262A3.262,3.262,0,0,1,99.524,146.924Zm28.515,21.946a57.288,57.288,0,1,1-12.174,35.309,57.288,57.288,0,0,1,12.174-35.309Z"
+                                            transform="translate(-74.436 -71.794)" fill="" />
+                                    </g>
+                                </svg>
+                            </figure>
+                            <h4>विपद् को प्रतिकार्य स्वरूप लजिस्टिक हबकोलागि</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="about-item">
+                            <figure>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="197.344" height="257.167"
+                                    viewBox="0 0 197.344 257.167">
+                                    <g id="Group_55" data-name="Group 55" transform="translate(0 0)">
+                                        <g id="noun_helpful_968823_1_" data-name="noun_helpful_968823 (1)">
+                                            <g id="Group_54" data-name="Group 54">
+                                                <path id="Path_137" data-name="Path 137"
+                                                    d="M293.342,140.47c-2.122.329-3.189-.165-3.73-1.14a10.859,10.859,0,0,1-7.755,9.328A18.332,18.332,0,0,0,289.5,151.9c13.555,2.086,19.728,16.717,19.728,29.43,0,10.066-2.757,16.761-7.072,21.2,21.007-8.739,31.545-19.176,22.439-41.2C320.025,150.27,304.867,138.687,293.342,140.47Z"
+                                                    transform="translate(-130.545 11.739)" fill="" />
+                                                <path id="Path_138" data-name="Path 138"
+                                                    d="M202.653,153.465c-1.368-.828-3.213-2.009-5.182-3.413-.858,2.265-1.431,4.323-1.008,5.1.047.085.3.153.5.184,6.53,1,11.345,4.927,14.584,10.141A20.16,20.16,0,0,0,202.653,153.465Z"
+                                                    transform="translate(-137.751 12.642)" fill="" />
+                                                <path id="Path_139" data-name="Path 139"
+                                                    d="M171.482,157.616c4.445-1.082,12.488-8.738,19.02-14.984a10.746,10.746,0,0,1-.567-2.866q-.333-5.618-.493-10.986c-14.875.726-3.017,15.956-12.591,14.476-11.524-1.784-26.686,9.8-31.258,20.863-6.33,15.309-3.166,25.018,6.4,32.452a42.432,42.432,0,0,1-.873-8.928C151.123,176.285,160.205,160.359,171.482,157.616Z"
+                                                    transform="translate(-142.302 10.85)" fill="" />
+                                                <path id="Path_140" data-name="Path 140"
+                                                    d="M247.055,189.892c0-11.358,9.081-27.284,20.361-30.026,2.228-.542,2.56-1.73,3.193-5.083.158-.839.333-1.743.571-2.686V76.78c2.393,4.911,4.824,12.659,6.247,24.44.24,1.984.455,4.062.633,6.281v0c.424,5.285.667,11.24.663,17.945,0,5.979-.189,12.547-.61,19.764a8.674,8.674,0,0,0,8.155,9.163c.173.011.343.015.515.015a8.676,8.676,0,0,0,8.65-8.17c.436-7.52.64-14.422.642-20.772,0-7.111-.256-13.524-.722-19.319,0-.009,0-.017,0-.026-.189-2.308-.42-4.494-.671-6.616-2.344-19.711-7.325-31.568-13.4-39.015a28.027,28.027,0,0,0-10.411-8.117,20.049,20.049,0,0,0-7.914-1.741,12.493,12.493,0,0,0-1.537.087.1.1,0,0,0-.017,0H222.3l-.015,0a12.006,12.006,0,0,0-1.531-.089,20.586,20.586,0,0,0-9.149,2.32c-5.832,2.892-12.12,9.216-16.518,20.427-4.271,10.8-7.192,26.228-7.435,49.149-.011.975-.023,1.942-.023,2.945,0,6.35.2,13.253.646,20.77a8.674,8.674,0,0,0,8.651,8.17c.171,0,.343-.007.515-.017a8.676,8.676,0,0,0,8.154-9.167c-.424-7.208-.616-13.778-.616-19.756-.007-4.655.111-8.942.324-12.9,1-18.362,4.134-29.473,7.228-35.805v97.524a37.649,37.649,0,0,1,4.886,18.87c0,8.247-1.849,14.233-4.886,18.57V239.5a13.406,13.406,0,0,0,26.811,0V141.622h5.026V239.5a13.406,13.406,0,0,0,26.811,0V217.844C257.687,216.1,247.055,209.822,247.055,189.892Z"
+                                                    transform="translate(-138.483 4.264)" fill="" />
+                                                <ellipse id="Ellipse_23" data-name="Ellipse 23" cx="24.396" cy="24.396"
+                                                    rx="24.396" ry="24.396" transform="translate(78.978)" fill="" />
+                                                <path id="Path_141" data-name="Path 141"
+                                                    d="M310.215,181.317c0-12.5-6.143-25.48-17.89-27.286a19.442,19.442,0,0,1-10.154-4.966c-.057,0-.114.009-.171.009-.209,0-.415-.007-.625-.02a10.828,10.828,0,0,1-10.143-9.536c-5.079,6.163-1.474,13.354-8.09,14.964-10.133,2.464-18.7,17.217-18.7,27.919,0,21.407,12.38,26.384,32.89,26.384S310.215,202.725,310.215,181.317Zm-4.7-1.084s3.433,13.373-7.59,19.879C302.083,191.888,306.42,182.763,305.518,180.233Zm-32.528-24.214s-16.264,9.758-22.047,26.382C249.5,162.525,272.991,156.019,272.991,156.019Z"
+                                                    transform="translate(-133.697 11.755)" fill="" />
+                                                <path id="Path_142" data-name="Path 142"
+                                                    d="M200.325,158.034c-3.586-.552-2.675-4.574-.756-9.31a10.836,10.836,0,0,1-8.96-5.248c-6.845,6.541-14.589,13.822-19.469,15.009-10.133,2.465-18.7,17.217-18.7,27.92,0,21.407,12.38,26.384,32.89,26.384s32.888-6.061,32.888-27.468C218.215,172.821,212.072,159.841,200.325,158.034Zm-20.059,2.711S164,170.5,158.221,187.129C156.775,167.25,180.267,160.745,180.267,160.745Zm-18.536,40.6s15.761,8.5,29.443,5.461C179.833,217.128,161.73,201.345,161.73,201.345Zm44.561-.12c4.155-8.223,8.492-17.348,7.59-19.879C213.881,181.346,217.313,194.719,206.291,201.224Z"
+                                                    transform="translate(-141.449 12.088)" fill="" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+
+
+                            </figure>
+                            <h4> राहत वितरण तथा अन्य समन्वय</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="about-item">
+                            <figure>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="216.364" height="197.574"
+                                    viewBox="0 0 216.364 197.574">
+                                    <g id="noun_help_1781169" transform="translate(0 0)">
+                                        <g id="Group_56" data-name="Group 56" transform="translate(0 0)">
+                                            <path id="Path_143" data-name="Path 143"
+                                                d="M116.128,115.027C80.476,96.955,68.5,67.682,45.478,88.124a.637.637,0,0,1-1.1-.409c-.041-5.029-.2-17.867-.245-23.223a.978.978,0,0,1,1.431-.859c2.9,1.676,9.731,6.419,14.6,7.686a12.5,12.5,0,0,0,10.794-2.29c4.375-3.434,10.916-8.872,16.272-13.369a9.8,9.8,0,0,1-4.988-4.947,10.165,10.165,0,0,1-.123-8.177,5.846,5.846,0,0,1,.613-1.1c-4.661,3.68-11.325,9.036-14.719,11.734a4.3,4.3,0,0,1-4.661.45S40.409,37.222,38,34.769a21.85,21.85,0,0,0-14.433-6.337C11.012,27.86.75,38.94.75,51.491v53.968c0,9.813,5.07,19.216,13.778,23.714,6.378,3.271,12.715,3.6,17.867,1.513a18.6,18.6,0,0,0,5.07-2.985h.041c.736-.777,1.513-1.431,2.249-2.208,30.173-31.482,42.439-2.739,68.319,5.847,4.824,1.595,10.058.368,12.184-4.293l.082-.2A9.037,9.037,0,0,0,116.128,115.027Z"
+                                                transform="translate(-0.75 57.951)" fill="" />
+                                            <ellipse id="Ellipse_24" data-name="Ellipse 24" cx="17.376" cy="17.376"
+                                                rx="17.376" ry="17.376" transform="translate(4.272 45.906)" fill="" />
+                                            <path id="Path_144" data-name="Path 144"
+                                                d="M156.924,106.141c-.475-16.756-3.875-35.79-7.41-52.546-3.439-16.3-15.758-38.827-29.936-38.827h-7.355C99.941,16.8,92.883,23.051,89.168,27.925L62.183,60.949a8.051,8.051,0,0,1-3.88,2.327L29.253,74.422A6,6,0,0,0,32.7,85.9l36.514-11a14.4,14.4,0,0,0,6.129-3.332L86.759,62.2a.863.863,0,0,1,1.46.45c5.078,14.962,7.775,30.633,7.889,43.488h3.505l9.154,60.237a8.756,8.756,0,0,0,8.542,6.83h.008a8.756,8.756,0,0,0,8.751-9.045l-1.916-58.022h.149l13.287,60.2a8.756,8.756,0,0,0,17.3-2.152l-1.758-58.046h3.792Z"
+                                                transform="translate(59.439 24.365)" fill="" />
+                                            <ellipse id="Ellipse_25" data-name="Ellipse 25" cx="17.721" cy="17.721"
+                                                rx="17.721" ry="17.721" transform="translate(147.595)" fill="" />
+                                        </g>
+                                    </g>
+                                </svg>
+
+
+                            </figure>
+                            <h4> संस्कृतिक तथा मनोरन्जनात्मक कार्यक्रम</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mapdanda pdtb-50 section bg-image" data-background="img/video-bg.jpg">
+            <div class="overlay"></div>
+            <div class="container-fluid">
+                <div class="openSpace-title">
+                    <h3>मापदण्ड</h3>
+                    <figure>
+                            <img src="img/title_white_loader.svg" alt="title-loader" />
+                        </figure>
+                    <span>विशेषज्ञ र स्थानीयहरूबीच निम्न लिखित मापदण्डमा आधारित छलफल पश्चात, खुल्ला क्षेत्रहरुको सुची
+                        तयार गरियो। </span>
+                </div>
+                <div class="mapdanda-tab">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="one_tab" data-toggle="tab" href="#one" role="tab"
+                                aria-controls="one" aria-selected="true"><samp>१</samp> आकार या क्षेत्रफल
+
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="two_tab" data-toggle="tab" href="#two" role="tab"
+                                aria-controls="two" aria-selected="false"><samp>२</samp>रक्षा ̸ सुरक्षा
+
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="three_tab" data-toggle="tab" href="#three" role="tab"
+                                aria-controls="three" aria-selected="false"><samp>३</samp>पहुँच
+
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="four_tab" data-toggle="tab" href="#four" role="tab"
+                                aria-controls="four" aria-selected="false"><samp>४</samp>स्रोतको उपलब्धता
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="five_tab" data-toggle="tab" href="#five" role="tab"
+                                aria-controls="five" aria-selected="false"><samp>५</samp>सामाजिक र संस्कृतिक विषयहरू
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="six_tab" data-toggle="tab" href="#six" role="tab"
+                                aria-controls="six" aria-selected="false"><samp>६</samp>वातावरणीय चासो
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="one" role="tabpanel" aria-labelledby="one_tab">
+                            <div class="tab-slider">
+                                <div class="tab-item">
+                                    <h4>1) कुल क्षेत्र भन्दा बढि हुनुपर्छ  10 भन्दा बढी रोपनी</h4>
+                                </div>
+                                <div class="tab-item">
+                                    <figure>
+                                        <img src="img/mapdanda-1.png" alt="" />
+                                        <span class="cross-icon"><i class="fa fa-close"></i></span>
+                                    </figure>
+                                    <h5>भूमि क्षेत्र 10 रोपनी भन्दा कम</h5>
+                                </div>
+                                <div class="tab-item">
+                                    <figure>
+                                        <img src="img/mapdanda-2.png" alt="" />
+                                        <span class="cross-icon check-icon"><i class="fa fa-check"></i></span>
+                                    </figure>
+                                    <h5>भूमि क्षेत्र 10 रोपनी भन्दा ठूलो</h5>
+                                </div>
+                                <div class="tab-item">
+                                    <figure>
+                                        <img src="img/mapdanda-1.png" alt="" />
+                                        <span class="cross-icon"><i class="fa fa-close"></i></span>
+                                    </figure>
+                                    <h5>भूमि क्षेत्र 10 रोपनी भन्दा कम</h5>
+                                </div>
+                                <div class="tab-item">
+                                    <figure>
+                                        <img src="img/mapdanda-2.png" alt="" />
+                                        <span class="cross-icon check-icon"><i class="fa fa-check"></i></span>
+                                    </figure>
+                                    <h5>भूमि क्षेत्र 10 रोपनी भन्दा ठूलो</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="two" role="tabpanel" aria-labelledby="two_tab">
+                            <div class="tab-slider">
+                                <div class="tab-item">
+                                    <h4>1) कुल क्षेत्र भन्दा बढि हुनुपर्छ  10 भन्दा बढी रोपनी</h4>
+                                </div>
+                                <div class="tab-item">
+                                    <figure>
+                                        <img src="img/mapdanda-1.png" alt="" />
+                                        <span class="cross-icon"><i class="fa fa-close"></i></span>
+                                    </figure>
+                                    <h5>भूमि क्षेत्र 10 रोपनी भन्दा कम</h5>
+                                </div>
+                                <div class="tab-item">
+                                    <figure>
+                                        <img src="img/mapdanda-2.png" alt="" />
+                                        <span class="cross-icon check-icon"><i class="fa fa-check"></i></span>
+                                    </figure>
+                                    <h5>भूमि क्षेत्र 10 रोपनी भन्दा ठूलो</h5>
+                                </div>
+                                <div class="tab-item">
+                                    <figure>
+                                        <img src="img/mapdanda-1.png" alt="" />
+                                        <span class="cross-icon"><i class="fa fa-close"></i></span>
+                                    </figure>
+                                    <h5>भूमि क्षेत्र 10 रोपनी भन्दा कम</h5>
+                                </div>
+                                <div class="tab-item">
+                                    <figure>
+                                        <img src="img/mapdanda-2.png" alt="" />
+                                        <span class="cross-icon check-icon"><i class="fa fa-check"></i></span>
+                                    </figure>
+                                    <h5>भूमि क्षेत्र 10 रोपनी भन्दा ठूलो</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade " id="three" role="tabpanel" aria-labelledby="three_tab">
+                            <div class="tab-slider">
+                                <div class="tab-item">
+                                    <h4>1) कुल क्षेत्र भन्दा बढि हुनुपर्छ  10 भन्दा बढी रोपनी</h4>
+                                </div>
+                                <div class="tab-item">
+                                    <figure>
+                                        <img src="img/mapdanda-1.png" alt="" />
+                                        <span class="cross-icon"><i class="fa fa-close"></i></span>
+                                    </figure>
+                                    <h5>भूमि क्षेत्र 10 रोपनी भन्दा कम</h5>
+                                </div>
+                                <div class="tab-item">
+                                    <figure>
+                                        <img src="img/mapdanda-2.png" alt="" />
+                                        <span class="cross-icon check-icon"><i class="fa fa-check"></i></span>
+                                    </figure>
+                                    <h5>भूमि क्षेत्र 10 रोपनी भन्दा ठूलो</h5>
+                                </div>
+                                <div class="tab-item">
+                                    <figure>
+                                        <img src="img/mapdanda-1.png" alt="" />
+                                        <span class="cross-icon"><i class="fa fa-close"></i></span>
+                                    </figure>
+                                    <h5>भूमि क्षेत्र 10 रोपनी भन्दा कम</h5>
+                                </div>
+                                <div class="tab-item">
+                                    <figure>
+                                        <img src="img/mapdanda-2.png" alt="" />
+                                        <span class="cross-icon check-icon"><i class="fa fa-check"></i></span>
+                                    </figure>
+                                    <h5>भूमि क्षेत्र 10 रोपनी भन्दा ठूलो</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="four" role="tabpanel" aria-labelledby="four_tab">
+                            <div class="tab-slider">
+                                <div class="tab-item">
+                                    <h4>1) कुल क्षेत्र भन्दा बढि हुनुपर्छ  10 भन्दा बढी रोपनी</h4>
+                                </div>
+                                <div class="tab-item">
+                                    <figure>
+                                        <img src="img/mapdanda-1.png" alt="" />
+                                        <span class="cross-icon"><i class="fa fa-close"></i></span>
+                                    </figure>
+                                    <h5>भूमि क्षेत्र 10 रोपनी भन्दा कम</h5>
+                                </div>
+                                <div class="tab-item">
+                                    <figure>
+                                        <img src="img/mapdanda-2.png" alt="" />
+                                        <span class="cross-icon check-icon"><i class="fa fa-check"></i></span>
+                                    </figure>
+                                    <h5>भूमि क्षेत्र 10 रोपनी भन्दा ठूलो</h5>
+                                </div>
+                                <div class="tab-item">
+                                    <figure>
+                                        <img src="img/mapdanda-1.png" alt="" />
+                                        <span class="cross-icon"><i class="fa fa-close"></i></span>
+                                    </figure>
+                                    <h5>भूमि क्षेत्र 10 रोपनी भन्दा कम</h5>
+                                </div>
+                                <div class="tab-item">
+                                    <figure>
+                                        <img src="img/mapdanda-2.png" alt="" />
+                                        <span class="cross-icon check-icon"><i class="fa fa-check"></i></span>
+                                    </figure>
+                                    <h5>भूमि क्षेत्र 10 रोपनी भन्दा ठूलो</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="five" role="tabpanel" aria-labelledby="five_tab">
+                            <div class="tab-slider">
+                                <div class="tab-item">
+                                    <h4>1) कुल क्षेत्र भन्दा बढि हुनुपर्छ  10 भन्दा बढी रोपनी</h4>
+                                </div>
+                                <div class="tab-item">
+                                    <figure>
+                                        <img src="img/mapdanda-1.png" alt="" />
+                                        <span class="cross-icon"><i class="fa fa-close"></i></span>
+                                    </figure>
+                                    <h5>भूमि क्षेत्र 10 रोपनी भन्दा कम</h5>
+                                </div>
+                                <div class="tab-item">
+                                    <figure>
+                                        <img src="img/mapdanda-2.png" alt="" />
+                                        <span class="cross-icon check-icon"><i class="fa fa-check"></i></span>
+                                    </figure>
+                                    <h5>भूमि क्षेत्र 10 रोपनी भन्दा ठूलो</h5>
+                                </div>
+                                <div class="tab-item">
+                                    <figure>
+                                        <img src="img/mapdanda-1.png" alt="" />
+                                        <span class="cross-icon"><i class="fa fa-close"></i></span>
+                                    </figure>
+                                    <h5>भूमि क्षेत्र 10 रोपनी भन्दा कम</h5>
+                                </div>
+                                <div class="tab-item">
+                                    <figure>
+                                        <img src="img/mapdanda-2.png" alt="" />
+                                        <span class="cross-icon check-icon"><i class="fa fa-check"></i></span>
+                                    </figure>
+                                    <h5>भूमि क्षेत्र 10 रोपनी भन्दा ठूलो</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="six" role="tabpanel" aria-labelledby="six_tab">
+                            <div class="tab-slider">
+                                <div class="tab-item">
+                                    <h4>1) कुल क्षेत्र भन्दा बढि हुनुपर्छ  10 भन्दा बढी रोपनी</h4>
+                                </div>
+                                <div class="tab-item">
+                                    <figure>
+                                        <img src="img/mapdanda-1.png" alt="" />
+                                        <span class="cross-icon"><i class="fa fa-close"></i></span>
+                                    </figure>
+                                    <h5>भूमि क्षेत्र 10 रोपनी भन्दा कम</h5>
+                                </div>
+                                <div class="tab-item">
+                                    <figure>
+                                        <img src="img/mapdanda-2.png" alt="" />
+                                        <span class="cross-icon check-icon"><i class="fa fa-check"></i></span>
+                                    </figure>
+                                    <h5>भूमि क्षेत्र 10 रोपनी भन्दा ठूलो</h5>
+                                </div>
+                                <div class="tab-item">
+                                    <figure>
+                                        <img src="img/mapdanda-1.png" alt="" />
+                                        <span class="cross-icon"><i class="fa fa-close"></i></span>
+                                    </figure>
+                                    <h5>भूमि क्षेत्र 10 रोपनी भन्दा कम</h5>
+                                </div>
+                                <div class="tab-item">
+                                    <figure>
+                                        <img src="img/mapdanda-2.png" alt="" />
+                                        <span class="cross-icon check-icon"><i class="fa fa-check"></i></span>
+                                    </figure>
+                                    <h5>भूमि क्षेत्र 10 रोपनी भन्दा ठूलो</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="openSpace_save pdtb-50 bg-grey section">
+            <div class="container-fluid">
+                <div class="openSpace-title">
+                    <h3>खुल्ला क्षेत्रको संरक्षण कसरी गर्ने?</h3>
+                    <figure>
+                            <img src="img/title_loader.svg" alt="title-loader" />
+                        </figure>
+                    <span>विपद्को समयमा खुल्ला क्षेत्रको प्रयोग महत्वपूर्ण रहने भएकाले उक्त खुल्ला क्षेत्रहरुको संरक्षण
+                        तथा प्रवर्द्धन गर्नु आवश्यक हुन्छ । यस्ता खुल्ला क्षेत्रहरुको संरक्षण गर्नका निम्ति निम्न
+                        उपायहरु अपनाउन सकिन्छ। </span>
+                </div>
+                <div class="normal-list">
+                    <ul>
+                        <li>1) समुदायमा खुल्ला क्षेत्रको संरक्षणबारे जनचेतना सम्बन्घि कार्यक्रम </li>
+                        <li>2) मापदण्ड अनुरुप पहिचान भएका खुल्ला क्षेत्रको स्थानिय निकायको संरक्षण दस्ताबेजमा प्रकाशन
+                            गर्ने </li>
+                        <li>3) निजी क्षेत्रसंगको सहकार्यमा पहिचान भएका खुल्ला क्षेत्रको तारबार गरेर अतिक्रमण हुन नदिने
+                        </li>
+                        <li>4) अतिक्रमण भएको वा हुन लागेको खण्डमा स्थानिय निकायका सरोकारवालालाई जानकारी प्रदान गर्ने
+                        </li>
+                        <li>5) अतिक्रमण भएको वा हुन लागेको खण्डमा स्थानिय निकायका सरोकारवालालाई जानकारी प्रदान गर्ने
+                        </li>
+                        <li>6) खुल्ला क्षेत्र प्रर्बद्धनका लागी उपयुक्त बाटो र स्रोतको पहुँचको व्यवस्था गर्ने </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <div class="copy_right">
+        <div class="container-fluid">
+            <span>Copyright all rights reserved @ naxa.com.np</span>
+        </div>
+    </div>
+
+    <!-- jquery library start -->
+    <script src="js/vendor/jquery-3.4.1.min.js"></script>
+    <script src="js/vendor/popper.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/bootstrap-select.min.js"></script>
+    <script src="js/vendor/slick.min.js"></script>
+    <script src="js/vendor/lity.min.js"></script>
+    <script src="js/vendor/jquery.magnific-popup.min.js"></script>
+    <script src="js/vendor/jquery.slimscroll.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="js/vendor/aos.js"></script>
+    <script src="js/map.js "></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

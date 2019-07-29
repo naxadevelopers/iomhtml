@@ -1,0 +1,88 @@
+.site-footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    .footer-widget{
+      h3{
+       font-size:1rem;
+       position: relative;
+       padding-bottom: 0.5rem;
+       font-weight: 600;
+       margin-bottom: 1.5rem;
+       &::after{
+         content:'';
+         width:50px;
+         height: 1px;
+         background-color: $color-red;
+         position: absolute;
+         bottom:0;
+         left:0;
+       }
+      
+      }
+      ul{
+       li{
+         a{
+           position: relative;
+           padding:0.25rem 0;
+           display: block;
+           padding-left: 1rem;
+           @include anim05;
+           &:after{
+             content:'\f105';
+             font-family: "FontAwesome";
+             display: inline-block;
+             position: absolute;
+             left:0;
+             top:0.25rem;
+             color:$color-blue;
+           }
+           &:hover{
+             padding-left:1.5rem;
+             color:$color-blue;
+           }
+         }
+       }
+     }
+     form{
+         margin:1rem 0;
+         .input-group-text{
+             background-color:$color-white;
+         }
+     }
+     p{
+         margin-top:1rem;
+     }
+     .ft-social{
+         margin-top:1rem;
+         @include clear;
+       a{
+         display: inline-block;
+         margin-right: 0.6125rem;
+         i{
+           width:40px;
+           height: 40px;
+           @include flexvr;
+           color:$color-blue;
+           @include boxshadow;
+           background-color: $color-white;
+           @include radius50;
+           @include anim05;
+           &:hover{
+               background-color: $color-blue;
+               color:$color-white;
+           }
+         }
+       }
+     }
+    }
+  }
+  .copy_right{
+    background-color: $color-blue;
+    padding:0.5rem;
+    text-align: center;
+    span{
+      color:$color-white;
+      font-size:0.875rem;
+    }
+  }

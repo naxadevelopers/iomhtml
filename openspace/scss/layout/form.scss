@@ -1,0 +1,303 @@
+
+    form{
+        .form-group{
+            @include clear;
+            input.form-control,
+            textarea.form-control{
+                border:1px solid $color-bg;
+                padding: 0.625rem 0;
+                font-size: 0.8125rem;
+                line-height: 1.5;
+                color: $color-primary;
+                background-color: $color-white;
+                @include placeholder($color-primary);
+                &:focus{
+                    box-shadow:none;
+                    border-color:$color-blue;
+                }
+            }
+            label{
+              color:$color-primary;
+              font-weight: 500;
+              font-size: 0.875rem;
+              text-transform: capitalize;
+              sup{
+                color:$color-red;
+              }
+            }
+            textarea.form-control{
+              min-height: 150px;
+            }
+            ::-webkit-input-placeholder { 
+                color: rgba($color-primary , 0.5);
+                font-weight: 400;
+              }
+              :-moz-placeholder { 
+                color: rgba($color-primary , 0.5);
+              }
+              ::-ms-input-placeholder { 
+                color: rgba($color-primary , 0.5);
+              }
+              .checkbox {
+                margin-right: 1rem;
+                label{
+                  position: relative;
+                  cursor: pointer;
+                  padding-left: 1.5rem;
+                  text-align: left;
+                  font-size: 0.775rem;
+                  display: block;
+                  font-weight: 400;
+                  .helper {
+                    position: absolute;
+                    top: 2px;
+                    left: 0;
+                    width: 1rem;
+                    height: 1rem;
+                    z-index: 0;
+                    border: 0.115rem solid $color-yellow;
+                    @include radius4;
+                    -webkit-transition: border-color 0.1s ease;
+                    transition: border-color 0.1s ease;
+                    &::after,
+                    &::before{
+                      position: absolute;
+                      height: 0;
+                      width: 0.1rem;
+                      background-color: $color-white;
+                      display: block;
+                      -webkit-transform-origin: left top;
+                              transform-origin: left top;
+                      border-radius: 0.25rem;
+                      content: '';
+                      -webkit-transition: opacity 0.28s ease, height 0s linear 0.28s;
+                      transition: opacity 0.1s ease, height 0s linear 0.1s;
+                      opacity: 0;
+                    }
+                    &::before{
+                      top: 0.65rem;
+                      left: 0.3rem;
+                      -webkit-transform: rotate(-135deg);
+                              transform: rotate(-135deg);
+                      // box-shadow: 0 0 0 0.0625rem $color-white;
+                    }
+                    &::after{
+                      top: 0.4rem;
+                      left: 0;
+                      -webkit-transform: rotate(-45deg);
+                              transform: rotate(-45deg);
+                    }
+                  
+                  }
+                  input{
+                    width: auto;
+                    opacity: 0.00000001;
+                    position: absolute;
+                    left: 0;
+                    &:checked{
+                      
+                      ~ .helper{
+                        color:$color-blue;
+                        background-color: $color-yellow;
+                        &::after{
+                          opacity: 1;
+                          -webkit-transition: height 0.28s ease;
+                          transition: height 0.28s ease;
+                          height: 0.35rem;
+                        }
+                        &::before{
+                          opacity: 1;
+                          -webkit-transition: height 0.28s ease;
+                          transition: height 0.28s ease;
+                          height: 0.7rem;
+                          -webkit-transition-delay: 0.28s;
+                                  transition-delay: 0.28s;
+                        }
+                      }
+                    }
+                  }
+                  &:hover{
+                    color:$color-blue;
+                  }
+                }
+                
+              }
+              .radiobox {
+                margin-right: 1rem;
+                label{
+                  position: relative;
+                  cursor: pointer;
+                  padding-left: 1.5rem;
+                  text-align: left;
+                  display: block;
+                  margin-bottom: 0;
+                  color: rgba($color-primary , 0.5);
+                  font-weight: 400;
+                  .helper{
+                    position: absolute;
+                    top: 0;
+                    left: -0.25rem;
+                    cursor: pointer;
+                    display: block;
+                    font-size: 1rem;
+                    -webkit-user-select: none;
+                      -moz-user-select: none;
+                        -ms-user-select: none;
+                            user-select: none;
+                    &::before,
+                    &::after{
+                      content: '';
+                      position: absolute;
+                      left: 0;
+                      top: 0;
+                      margin: 0.25rem;
+                      width: 1rem;
+                      height: 1rem;
+                      -webkit-transition: -webkit-transform 0.28s ease;
+                      transition: -webkit-transform 0.28s ease;
+                      transition: transform 0.28s ease;
+                      transition: transform 0.28s ease, -webkit-transform 0.28s ease;
+                      border-radius: 50%;
+                      border: 0.125rem solid $color-bg;
+                    }
+                    &::after{
+                      -webkit-transform: scale(0);
+                          transform: scale(0);
+                      background-color: $color-blue;
+                      border-color: $color-blue;
+                    }
+                  }
+                  input{
+                    width: auto;
+                    opacity: 0.00000001;
+                    position: absolute;
+                    left: 0;
+                    &:checked{
+                      ~ .helper::after{
+                        -webkit-transform: scale(0.5);
+                        transform: scale(0.5);
+                      }
+                      ~ .helper::before{
+                        color:$color-blue;
+                      }
+                    }
+                  }
+                  &:hover{
+                    color:$color-blue;
+                  }
+                }
+                
+              }
+            &.flexrow{
+              @include flexjust;
+              justify-content: flex-start;
+              align-items: center;
+              .custom-control{
+                margin-right: 1rem;
+              }
+            }
+          }
+          .wide{
+            width:100%;
+            button{
+              font-size: 0.875rem;
+              text-transform: capitalize;
+              .filter-option-inner-inner{
+                font-size: 0.875rem; 
+              }
+            }
+          }
+          .bootstrap-select{
+            width:100% !important;
+          }
+    }
+    .openSpace-popup{
+        @include loadpopup;
+        overflow-y:auto;
+        .popup-body{
+            max-width: 600px;
+            width:96%;
+            @include translatey;
+            left:0;
+            right:0;
+            margin:auto;
+            z-index: 10111111;
+            .card{
+                position: relative;
+                @include boxshadow13;
+                .popup-close{
+                    // position: absolute;
+                    // top:0;
+                    // right:0;
+                    width:25px;
+                    height: 25px;
+                    @include flexvr;
+                    color:$color-red;
+                    @include radius50;
+                    cursor:pointer;
+                    background-color: $color-white;
+                    @include anim05;
+                    &:hover{
+                        background-color: $color-red;
+                        color:$color-white;
+                    }
+                }
+                button.openSpace_btn{
+                  margin:0 auto;
+                  text-transform: capitalize;
+                  padding: 0.275rem 1rem;
+
+                }
+            }
+        }
+      }
+      .onoffswitch {
+        position: relative; width: 80px;
+        -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+        margin-left:0.5rem;
+        .onoffswitch-checkbox {
+          display: none;
+      }
+      .onoffswitch-label {
+        display: block; overflow: hidden; cursor: pointer;
+        border: 2px solid #999999; border-radius: 20px;
+        .onoffswitch-inner {
+          display: block; width: 200%; margin-left: -100%;
+          transition: margin 0.3s ease-in 0s;
+          &::before,
+          &::after{
+            display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+            font-size: 14px; color: $color-white;  font-weight: bold;
+            box-sizing: border-box;
+          }
+          &::before {
+            content: "Nep";
+            padding-left: 10px;
+            background-color: $color-secondary; color: $color-white;
+        }
+        &::after {
+          content: "Eng";
+          padding-right: 10px;
+          background-color: $color-secondary; color: $color-white;
+          text-align: right;
+      }
+      }
+    }
+    }
+    
+    .onoffswitch-switch {
+        display: block; width: 18px; margin: 8px;
+        height: 18px;
+        background: $color-white;
+        position: absolute; top: 0; bottom: 0;
+        right: 46px;
+        border: 2px solid $color-secondary; 
+        transition: all 0.3s ease-in 0s; 
+        @include radius50
+    }
+    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+        margin-left: 0;
+    }
+    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+        right: 0px; 
+    }

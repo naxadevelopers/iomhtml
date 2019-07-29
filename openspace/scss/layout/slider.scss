@@ -1,0 +1,181 @@
+.slider {
+  position: relative;
+  .hero_content {
+    @include flexvr;
+    min-height: 450px;
+    background-color: $color-bg;
+    align-items: flex-start;
+    text-align: left;
+    padding: 1rem 5rem;
+
+    h2 {
+      font-size: 4rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    p {
+      margin: 1.5rem 0 2rem 0;
+    }
+  }
+  .paging_count {
+    @include translatey;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    @include flexvr;
+    z-index: 999;
+    @include radius50;
+    background-color: $color-secondary;
+    border: 2px solid $color-secondary;
+    color:$color-white;
+    @include boxshadow;
+    &::before,
+      &::after{
+        content: "";
+        position: absolute;
+        z-index: 0;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        display: block;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        -webkit-transition: all .2s;
+        transition: all .2s;
+        -webkit-animation: pulse-border 1.5s ease-out infinite;
+        animation: pulse-border 1.5s ease-out infinite;
+        border: 4px solid $color-secondary;
+      }
+      &::after{
+        width: 70px;
+        height: 70px;
+        -webkit-transition: all .2s;
+        transition: all .2s
+      }
+  }
+  .hero_slider {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+  
+    .hero_item {
+      figure {
+        min-height: 450px;
+        position: relative;
+  
+        .caption {
+          position: absolute;
+          bottom: 3rem;
+          left: -0.875rem;
+          z-index: 999;
+  
+          .openSpace_btn {
+            padding: 0.5rem 2rem;
+            min-width: 15rem;
+  
+            &::before {
+              content: "";
+              position: absolute;
+              border-bottom: 15px solid transparent;
+              border-right: 15px solid darken($color-blue, 15%);
+              left: 0;
+              bottom: -15px;
+            }
+          }
+        }
+      }
+    }
+  
+    .slick-dots {
+      @include translatey;
+      right: 1rem;
+      width: 50px;
+      bottom: initial;
+  
+      li {
+        width: 20px;
+        height: 2px;
+        margin: 2px 0;
+        cursor: pointer;
+        text-align: right;
+        float: right;
+        clear: both;
+  
+        button {
+          display: block;
+          width: 20px;
+          height: 2px;
+          padding: 5px;
+  
+          &::before {
+            content: '';
+            width: 20px;
+            height: 2px;
+            background: $color-white;
+            left:auto;
+            right:0;
+            @include anim05
+          }
+        }
+        &.slick-active{
+          width: 30px;
+          button{
+            width: 30px;
+            &::before{
+              width: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .slick-dotted.slick-slider{
+    margin:0;
+  }
+  @media screen and (max-width:1640px){
+    .hero_content {
+      padding: 1rem 5rem;
+      h2{
+        font-size:3rem;
+      }
+    }
+  }
+  @media screen and (max-width:$desktop){
+    .hero_content {
+      padding: 1rem;
+      h2{
+        font-size:2.5rem;
+      }
+    }
+  }
+  @media screen and (max-width:$mb-lg){
+    .hero_content {
+      h2{
+        font-size:1.5rem;
+      }
+    }
+  }
+}
+.tab-slider{
+  .slick-prev {
+      left: -2rem;
+      &::before{
+        content:'\f104';
+        font-family: 'FontAwesome'
+      }
+  }
+  .slick-next {
+    right: -2rem;
+    &::before{
+      content:'\f105';
+      font-family: 'FontAwesome'
+    }
+  }
+}
+

@@ -1,0 +1,145 @@
+.search-page{
+    .search-form{
+        form{
+            @include flex_start;
+            align-items: center;
+            .form-group{
+                min-width: 200px;
+                margin-right: 1rem;
+                .checkbox{
+                  margin:0;
+                  color: #212529;
+                  background-color: #f8f9fa;
+                  border-color: #f8f9fa;
+                  @include radius4;
+                  padding: 0.6rem 0.75rem;
+                  
+                  line-height: 1.5;
+                  label{
+                    margin:0;
+                    font-size: 1rem;
+                  }
+                }
+            }
+        }
+    }
+    .search-list{
+        @include flexjust;
+        flex-wrap: nowrap;
+        
+      }
+      .search-left{
+        @include flex_start;
+        flex-wrap: nowrap;
+        .doctor-profile{
+            max-width: 220px;
+            margin-right: 1rem;
+          }
+          .doctor-office{
+              margin-top:1rem;
+              h5{
+                  font-size: 0.875rem;
+                  font-weight: 600;
+                  text-transform: capitalize;
+              }
+              .office-thumb{
+                  @include flex_start;
+                  margin-top:0.6125rem;
+                  a{
+                      max-width: 50px;
+                      @include radius4;
+                      margin-right: 0.4rem;
+                  }
+              }
+          }
+      }
+      .search-right{
+          ul{
+              li{
+                  margin-bottom: 0.2rem;
+                  i{
+                      width:2rem;
+                      display: inline-block;
+                  }
+                  a,label{
+                      width:calc(100% - 2rem);
+                      float: right;
+                      font-size:0.8125rem;
+                  }
+                  label{
+                      margin:0;
+                      font-weight: 600;
+                      color:$color-green
+                  }
+              }
+          }
+      }
+      .profile-right-content{
+        .doctor-left-info{
+            h3{
+              font-size:1rem;
+              font-weight: 600;
+            }
+            p{
+              label{
+                font-weight: 600;
+                font-size: 0.775rem;
+                margin:0;
+              }
+            }
+          }
+          p{
+            margin:0;
+            font-size: 0.8125rem;
+          }
+          .tag-content{
+            @include flex_start;
+            align-items: center;
+            margin:0.7rem 0;
+            span{
+              padding:0 0.5rem;
+              background-color: rgba($color-yellow, 0.2);
+              border:1px solid rgba($color-yellow, 0.4);
+              @include radius4;
+              margin-right: 0.5rem;
+            }
+          }
+      }
+      .sidebar-widget{
+        ul{
+            li{
+              a{
+                position: relative;
+                padding:0.25rem 0;
+                display: block;
+                padding-left: 1rem;
+                @include anim05;
+                &:after{
+                  content:'\f105';
+                  font-family: "FontAwesome";
+                  display: inline-block;
+                  position: absolute;
+                  left:0;
+                  top:0.25rem;
+                  color:$color-blue;
+                }
+                &:hover{
+                  padding-left:1.5rem;
+                  color:$color-blue;
+                }
+              }
+            }
+          }
+      }
+      @media screen and (max-width:$ls-tab){
+        .search-list{
+          @include flexjust;
+          flex-wrap: wrap;
+          
+        }
+        // .search-left{
+        //   @include flex_start;
+        //   flex-wrap: wrap;
+        // }
+      }
+}

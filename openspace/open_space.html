@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SOCIAL MEDIA META -->
+    <meta property="og:description" content="Open Space Portal">
+    <meta property="og:image" content="preview.html">
+    <meta property="og:site_name" content="Open Space Portal">
+    <meta property="og:title" content="Open Space Portal">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://naxa.com.np">
+
+    <!-- TWITTER META -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@Open Space Portal">
+    <meta name="twitter:creator" content="@Open Space Portal">
+    <meta name="twitter:title" content="Open Space Portal">
+    <meta name="twitter:description" content="Open Space Portal">
+    <meta name="twitter:image" content="preview.html">
+
+    <!--title-->
+    <title>OpenSpace Portal</title>
+
+    <!-- faveicon start   -->
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+
+    <!-- stylesheet start -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/lity.min.css">
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="css/aos.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body class="">
+    <!-- OpenSpace header start   -->
+    <header class="site_header sticky-top">
+        <!-- Start Nav -->
+        <div class="headerWrap">
+            <div class="container-fluid">
+                <div class="top-header">
+                    <div class="headLeft">
+                        <!-- <div class="logo">
+                            <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+
+                        </div> -->
+                        <p>मानवीय सहायताका लागि <br /> खुल्ला क्षेत्र पोर्टल</p>
+                    </div>
+
+                    <div class="headRight">
+                        <nav id="site-navigation" class="main-navigation" role="navigation">
+                            <div class="toggle-button">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="menu-primary-container">
+                                <ul id="primary-menu" class="menu nav-menu">
+                                    <li class="menu-item ">
+                                        <a href="index.html">गृह पृष्ठ</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="about.html">हाम्रो बारे</a>
+                                    </li>
+                                    <li class="menu-item menu-item-has-current">
+                                        <a href="open_space.html">खुला ठाउँ खोज्नुहोस्</a>
+                                    </li>
+
+                                    <li class="menu-item ">
+                                        <a href="source.html">स्रोतहरू</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="manage.html"> शिविर व्यवस्थापन</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="contact.html">सम्पर्क</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <div class="onoffswitch">
+                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                            <label class="onoffswitch-label" for="myonoffswitch">
+                                <span class="onoffswitch-inner"></span>
+                                <span class="onoffswitch-switch"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <div class="openSpace-popup">
+        <div class="popup-body">
+            <div class="card">
+                <div class="card-header sub-card-header">
+                    <h5>Select space</h5>
+                    <span class="popup-close"><i class="fa fa-close"></i></span>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <select class="wide">
+                                <option>select Province</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="wide">
+                                <option>select District</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="wide">
+                                <option>select municiplaity</option>
+                            </select>
+                        </div>
+                        <div class="form-group pull-right">
+                            <button class="openSpace_btn" type="submit">apply</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="openSpace_map bg-grey pdtb-50 section">
+        <div class="container-fluid">
+
+            <div class="details-wrapper sticky-top">
+                <div class="map_sidebar ">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="sidebar_wrapper ">
+                                <div class="sidebar-header">
+                                    <h4>Open Spaces</h4>
+                                    <div class="header-btn">
+                                        <!-- <a href="#" class="" data-toggle="tooltip" data-placement="top"
+                                            title="Create Layer"><i class="fa fa-plus"></i></a> -->
+                                        <span class="collaps-icon" data-toggle="tooltip" data-placement="top"
+                                            title="Hide project">
+                                            <i class="fa fa-bars"></i>
+                                        </span>
+                                    </div>
+
+                                </div>
+
+                                <div class="row no-gutters">
+                                    <div class="col-6">
+                                        <div class="openSpace_summary">
+                                            <h4>230</h4>
+                                            <h5>Populations</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="openSpace_summary">
+                                            <h4>23000</h4>
+                                            <h5>Houses</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="openSpace_summary">
+                                            <h4>230</h4>
+                                            <h5>Populations</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="openSpace_summary">
+                                            <h4>230</h4>
+                                            <h5>Populations</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="openSpace_list">
+                                    <h5>List of Open Spaces</h5>
+                                    <ul>
+
+                                        <li class="active">
+                                            <a href="#">
+                                                <h5>Airport Golf Club Site (ARMY)</h5>
+                                                <div class="text">
+                                                    <p><i class="fa fa-map-marker"></i>Chabel Kathmandu</p>
+                                                    <em>
+                                                        <span>source:</span>Iom Nepal
+                                                    </em>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <h5>Airport Golf Club Site (ARMY)</h5>
+                                                <div class="text">
+                                                    <p><i class="fa fa-map-marker"></i>Chabel Kathmandu</p>
+                                                    <em>
+                                                        <span>source:</span>Iom Nepal
+                                                    </em>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <h5>Airport Golf Club Site (ARMY)</h5>
+                                                <div class="text">
+                                                    <p><i class="fa fa-map-marker"></i>Chabel Kathmandu</p>
+                                                    <em>
+                                                        <span>source:</span>Iom Nepal
+                                                    </em>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <h5>Airport Golf Club Site (ARMY)</h5>
+                                                <div class="text">
+                                                    <p><i class="fa fa-map-marker"></i>Chabel Kathmandu</p>
+                                                    <em>
+                                                        <span>source:</span>Iom Nepal
+                                                    </em>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <h5>Airport Golf Club Site (ARMY)</h5>
+                                                <div class="text">
+                                                    <p><i class="fa fa-map-marker"></i>Chabel Kathmandu</p>
+                                                    <em>
+                                                        <span>source:</span>Iom Nepal
+                                                    </em>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <h5>Airport Golf Club Site (ARMY)</h5>
+                                                <div class="text">
+                                                    <p><i class="fa fa-map-marker"></i>Chabel Kathmandu</p>
+                                                    <em>
+                                                        <span>source:</span>Iom Nepal
+                                                    </em>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <h5>Airport Golf Club Site (ARMY)</h5>
+                                                <div class="text">
+                                                    <p><i class="fa fa-map-marker"></i>Chabel Kathmandu</p>
+                                                    <em>
+                                                        <span>source:</span>Iom Nepal
+                                                    </em>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-wrapper">
+                    <div id="map" style="height:100vh"></div>
+                </div>
+                <span class="expand-icon">
+                    <i class="fa fa-arrow-right"></i>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <div class="copy_right">
+        <div class="container-fluid">
+            <span>Copyright all rights reserved @ naxa.com.np</span>
+        </div>
+    </div>
+
+    <!-- jquery library start -->
+    <script src="js/vendor/jquery-3.4.1.min.js"></script>
+    <script src="js/vendor/popper.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/bootstrap-select.min.js"></script>
+    <script src="js/vendor/slick.min.js"></script>
+    <script src="js/vendor/lity.min.js"></script>
+    <script src="js/vendor/jquery.magnific-popup.min.js"></script>
+    <script src="js/vendor/jquery.slimscroll.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="js/vendor/aos.js"></script>
+    <script src="js/map.js "></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

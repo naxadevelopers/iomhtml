@@ -1,0 +1,353 @@
+
+.openSpace_map {
+    padding: 0 !important;
+
+    .container-fluid {
+        max-width: 100%;
+    }
+
+    form {
+        @include flex_start;
+        justify-content: center;
+        align-items: center;
+
+        .form-group {
+            margin-right: 1rem;
+        }
+    }
+
+    .details-wrapper {
+        @include flexjust;
+        position: relative;
+        background-color: $color-white;
+
+        .expand-icon {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            @include flexvr;
+            background-color: $color-blue;
+            color: $color-white;
+            border-radius: 0 2rem 2rem 0;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            @include anim05;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $color-secondary;
+                color: $color-white;
+            }
+        }
+
+        .map_sidebar {
+            width: 300px;
+            display: inline-block;
+            opacity: 1;
+            transition: opacity 300ms;
+            position: relative;
+            z-index: 999999;
+
+            .card {
+                background-color: $color-white;
+
+                .card-body {
+                    padding: 1rem 0.5rem
+                }
+            }
+
+            .sidebar_wrapper {
+                box-shadow: none;
+
+                .sidebar-header {
+                    @include flexjust;
+                    align-items: center;
+                    padding-bottom: 5px;
+                    margin-bottom: 10px;
+                    border-bottom: 1px solid $color-white;
+
+                    h4 {
+                        font-size: 0.775rem;
+                        text-transform: uppercase;
+                        margin: 0;
+
+                    }
+
+                    .header-btn {
+                        @include flex_end;
+
+                        a {
+                            color: $color-blue;
+                            margin-right: 0.5rem;
+                        }
+                    }
+                }
+
+                .no-gutters {
+                    margin-bottom: 1rem;
+
+                    .col-6:nth-child(1),
+                    .col-6:nth-child(2) {
+                        .openSpace_summary {
+                            border-bottom: 1px solid $color-blue;
+                        }
+                    }
+
+                    .col-6:nth-child(odd) {
+                        .openSpace_summary {
+                            border-right: 1px solid $color-blue;
+                        }
+                    }
+
+                    .openSpace_summary {
+                        background-color: $color-white;
+                        @include radius4;
+                        padding: 0.5rem;
+                        @include flexvr;
+
+                        h4 {
+                            font-size: 0.775rem;
+                            color: $color-secondary;
+                            margin-bottom: 0;
+                        }
+
+                        h5 {
+                            font-size: 0.745rem;
+                        }
+                    }
+                }
+
+                .openSpace_list {
+                    h5 {
+                        font-size: 0.775rem;
+                        border-bottom: 1px solid $color-white;
+                    }
+
+                    ul {
+                        overflow-y: auto;
+
+                        li {
+                            margin-bottom: 0.6215rem;
+                            padding: 0.5rem;
+                            // border:1px solid $color-white;
+                            @include radius4;
+                            background-color: $color-white;
+                            border-bottom: 1px solid $color-blue;
+
+                            a {
+                                display: block;
+
+                                h5 {
+                                    font-size: 0.745rem;
+                                    color: $color-blue;
+                                    text-transform: capitalize;
+                                    margin-bottom: 0.2rem;
+                                }
+
+                                p {
+                                    margin-bottom: 0;
+                                    font-size: 0.675rem;
+                                    line-height: 1;
+
+                                    span,
+                                    i {
+                                        font-weight: 600;
+                                        margin-right: 0.25rem;
+                                        color: $color-secondary
+                                    }
+                                }
+
+                                em {
+                                    font-size: 0.675rem;
+                                    line-height: 0.875;
+
+                                    span {
+                                        font-weight: 600;
+                                        margin-right: 0.25rem;
+                                        color: $color-secondary
+                                    }
+                                }
+                            }
+
+                            &.active,
+                            &:hover {
+                                border-color: $color-secondary;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+
+        .map-wrapper {
+            width: calc(100% - 300px);
+            float: right;
+            position: relative;
+            .leaflet-right.leaflet-top{
+                bottom: 1rem;
+                top: auto;
+            }
+
+            .leaflet-popup-content-wrapper {
+                font-size: 16px;
+                line-height: 24px;
+
+                .leaflet-popup-content {
+                    width: 300px !important;
+                    overflow: auto;
+
+                    a {
+                        color: $color-white;
+                        text-transform: capitalize;
+                        padding: 0.275rem 0.5rem;
+                        @include radius4;
+                        font-size: 0.775rem;
+                    }
+
+                    .bind-header {
+                        margin-bottom: 0.5rem;
+
+                        h5 {
+                            font-size: 0.745rem;
+                            color: $color-blue;
+                            text-transform: capitalize;
+                            margin-bottom: 0.2rem;
+                        }
+
+                        p {
+                            margin: 0;
+                            font-size: 0.675rem;
+                            line-height: 1;
+
+                            span,
+                            i {
+                                font-weight: 600;
+                                margin-right: 0.25rem;
+                                color: $color-blue
+                            }
+                        }
+
+                        em {
+                            font-size: 0.675rem;
+                            line-height: 0.875;
+
+                            span {
+                                font-weight: 600;
+                                margin-right: 0.25rem;
+                                color: $color-blue
+                            }
+                        }
+                    }
+                }
+            }
+
+            .leaflet-popup-tip-container {
+                .leaflet-popup-tip {
+                    background-color: $color-blue;
+                }
+            }
+
+            .leaflet-popup-close-button {
+                color: $color-secondary;
+            }
+
+            #map {
+                z-index: 1;
+            }
+
+            .right_sidebar {
+                position: absolute;
+                right: 0;
+                top: 0;
+                z-index: 2;
+                @include anim05;
+
+                .sidebar_toggle {
+                    position: absolute;
+                    width: 40px;
+                    height: 40px;
+                    @include flexvr;
+                    background-color: $color-blue;
+                    color: $color-white;
+                    border-radius: 2rem 0 0 2rem;
+                    top: 0;
+                    left: -40px;
+                    z-index: 3;
+                    cursor: pointer;
+
+                    &.rotated {
+                        i {
+                            transform: rotate(180deg);
+                        }
+                    }
+                    &:hover {
+                        background-color: $color-secondary;
+                        color: $color-white;
+                    }
+                }
+
+                .sidebar_wrapper {
+                    display: block;
+                    width: 300px;
+                }
+                .general-info{
+                    figure{
+                        margin-top:0.875rem;
+                    }
+                    .general-content{
+                        margin-top:0.6125rem;
+                        .general-header{
+                            margin-bottom: 0.5rem;
+                        
+                        h5{
+                            font-size:0.745rem;
+                            color:$color-blue;
+                            margin:0;
+                        }
+                        time{
+                            font-size:0.645rem;
+                                i{
+                                    margin-right: 0.25rem;
+                                }
+                        }
+                    }
+                        p{
+                            font-size:0.675rem;
+                            margin:0;
+                            label{
+                                margin:0;
+                                font-weight: 500;
+                                margin-right: 0.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.hide {
+
+            .map_sidebar {
+                display: none;
+                opacity: 0;
+            }
+
+            .map-wrapper {
+                width: 100%;
+                float: left;
+                -webkit-transition: all .3s ease-in-out;
+                transition: all .3s ease-in-out;
+            }
+
+            .expand-icon {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}

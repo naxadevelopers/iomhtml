@@ -1,0 +1,165 @@
+aside.left-sidebar{
+    background-color: $color-white;
+    @include boxshadow;
+    h4{
+        font-size:1.2rem;
+        padding:1rem 1rem 0 1rem;
+        margin:0
+    }
+    form{
+        .input-group{
+            border:1px solid $color-bg;
+            input.form-control{
+                border:none;
+                background-color: $color-bg;
+                font-size: 0.875rem;
+            }
+            .input-group-prepend{
+                .input-group-text{
+                    background-color: $color-bg;
+                    border: none;
+                    color:$color-blue
+                }
+            }
+        }
+    }
+    
+}
+.accordion{
+    .card{
+        border:none;
+        box-shadow: none;
+        .card-header{
+            background: none;
+            h5{
+                margin:0;
+                a{
+                    display: block;
+                    color:$color-blue;
+                    font-size: 1rem;
+                    text-transform: capitalize;
+                    position: relative;
+                    &:after {
+                      content: "\f067"; /* fa-chevron-down */
+                      font-family: 'FontAwesome';
+                      position: absolute;
+                      right: 0;
+                    }
+                  }
+                  a[aria-expanded="true"]:after {
+                    content: "\f068"; /* fa-chevron-up */
+                  }
+            }
+        }
+        .card-body{
+            ul.source-list{
+                li{
+                    margin-bottom: 0.2rem;
+                    a{
+                        color:$color-blue;
+                        position: relative;
+                        text-transform: capitalize;
+                        display: block;
+                        padding:0.1rem 0.7rem;
+                        // &:after {
+                        //     content: "\f167"; /* fa-chevron-down */
+                        //     font-family: 'LineAwesome';
+                        //     position: absolute;
+                        //     left: 0;
+                        //     top:0;
+                        //   }
+                    }
+                    &.current{
+                        a{
+                            background-color:$color-blue;
+                            color:$color-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.map-accordion{
+        .card{
+            border-radius: 0;
+            .card-header{
+                padding:0;
+                border-radius: 0;
+                h5{
+                    a{
+                        font-size:0.745rem;
+                        padding:0.25rem 0.5rem;
+                        &:after {
+                          content: "\f107";
+                          font-size: 1rem;
+                          right:0.5rem;
+                        }
+                      }
+                      a[aria-expanded="true"]{
+                          background-color:$color-secondary;
+                          color:$color-white;
+                          
+                      }
+                      a[aria-expanded="true"]:after {
+                        content: "\f106"; /* fa-chevron-up */
+                      }
+                }
+            }
+            .card-body{
+                padding:0.5rem !important;
+                .acc-summary{
+                    p{
+                        margin:0;
+                        font-size:0.675rem;
+                        label{
+                            margin:0;
+                            font-weight: 400;
+                        }
+                    }
+                }
+                ul{
+                    li{
+                        @include flexjust;
+                        flex-wrap:nowrap;
+                        align-items: center;
+                        margin-top:0.6215rem;
+                        background-color:$color-bg;
+                        padding:0.25rem;
+                        .acc-content{
+                            max-width: 230px;
+                            h6{
+                                font-size:0.675rem;
+                                margin:0;
+                                color:$color-blue;
+                            }
+                            .acc-footer{
+                                @include flexjust;
+                                font-size:0.645rem;
+                                i{
+                                    margin-right: 0.25rem;
+                                }
+                            }
+                        }
+                        .direct-btn{
+                            width:24px;
+                            height: 24px;
+                            @include flexvr;
+                            background-color: $color-secondary;
+                            @include radius4;
+                            transform:rotate(-90deg);
+                            &:hover{
+                                background-color:$color-blue;
+                            }
+                            i{
+                                color:$color-white;
+                                font-size:0.775rem;
+                            }
+                            
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

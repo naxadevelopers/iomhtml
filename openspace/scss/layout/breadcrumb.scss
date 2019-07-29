@@ -1,0 +1,53 @@
+.inner-banner{
+  @include coverbg;
+  min-height: 350px;
+  @include flexvr;
+  position: relative;
+  color:$color-white;
+  .overlay{
+      @include overlay; 
+      background-color: rgba($color-blue, 0.7);
+  }
+  
+  .container{
+      position: relative;
+  }
+  .breadcrumb-content{
+      max-width: 700px;
+    h1{
+        color:$color-white;
+        margin-bottom: 1rem;
+    }
+  }
+}
+.map_breadcrumb{
+  margin:1rem 0;
+  .container-fluid {
+    max-width: 100%;
+  }
+  .card{
+    .card-body{
+      padding:0.5rem;
+    }
+  }
+  ul{
+    @include flex_start;
+    align-items: center;
+    li{
+      color:$color-blue;
+      font-size:0.775rem;
+      text-transform: capitalize;
+      font-weight: 500;
+      a{
+        color:$color-primary;
+        &::after{
+          content:'\f105';
+          display: inline-block;
+          font-family: 'FontAwesome';
+          margin:0 0.5rem;
+        }
+      }
+    }
+  }
+}
+
