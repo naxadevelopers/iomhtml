@@ -63,7 +63,7 @@
 
         //tooltip
         $('[data-toggle="tooltip"]').tooltip();
-        
+
         function productSlider() {
             var $status = $('.paging_count');
             var $slickElement = $('.hero_slider');
@@ -109,7 +109,7 @@
                 }
             ]
         });
-        
+
 
         AOS.init({
             disable: "mobile",
@@ -122,10 +122,10 @@
 
         $('.general-info a').magnificPopup({
             type: 'image',
-            gallery:{
-              enabled:true
-            }          
-          });
+            gallery: {
+                enabled: true
+            }
+        });
         // $('a[data-toggle="tab"]').on('shown.bs.tab', function () {
         //     $('.tab-slider').css("width", "100%");
         // });
@@ -150,12 +150,12 @@
         $('.details-wrapper .expand-icon').on('click', function () {
             $('.details-wrapper').removeClass('hide');
         });
-        $('.right_sidebar .sidebar_toggle').on('click', function() {
+        $('.right_sidebar .sidebar_toggle ,.close-popup').on('click', function () {
             $(this).toggleClass('rotated');
             $(this).closest('.right_sidebar').find('.sidebar_wrapper').toggle(300);
         });
 
-        
+
 
         $(".map_sidebar .openSpace_list ul").slimscroll({
             height: "100vh - 600px",
@@ -175,10 +175,78 @@
             borderRadius: "3px",
             railBorderRadius: "0"
         });
+        // side panel toggle and tab report page
+        $('.tabbed >span ').click(function () {
+            $(this).closest('.right_sidebar').find('.sidebar_wrapper').css('display', 'block');
+
+            var tab_id = $(this).attr('data-tab');
+
+            $('.tabbed > span').removeClass('current');
+            $('.tab-content').removeClass('current');
+
+            $(this).addClass('current');
+            $("#" + tab_id).addClass('current');
+        })
+        $(".openSpace_list ul li a >h5").click(function () {
+            $('.right_sidebar .sidebar_wrapper').css('display', 'block');
+            $('.top43').css('display', 'flex');
+            $(".general-info").removeClass("current");
+            $(".filter .general-info:nth-of-type(2)").addClass("current");
+
+        })
 
 
-        
-            
+
+        //dateform picker
+        var bindDatePicker = function () {
+            $(".date").datetimepicker({
+                format: 'YYYY-MM-DD',
+                icons: {
+                    time: "fa fa-clock-o",
+                    date: "fa fa-calendar",
+                    up: "fa fa-arrow-up",
+                    down: "fa fa-arrow-down"
+                }
+            }).find('input:first').on("blur", function () {
+                // check if the date is correct. We can accept dd-mm-yyyy and yyyy-mm-dd.
+                // update the format if it's yyyy-mm-dd
+                var date = parseDate($(this).val());
+
+                if (!isValidDate(date)) {
+                    //create date based on momentjs (we have that)
+                    date = moment().format('YYYY-MM-DD');
+                }
+
+                $(this).val(date);
+            });
+        }
+
+        var isValidDate = function (value, format) {
+            format = format || false;
+            // lets parse the date to the best of our knowledge
+            if (format) {
+                value = parseDate(value);
+            }
+
+            var timestamp = Date.parse(value);
+
+            return isNaN(timestamp) == false;
+        }
+
+        var parseDate = function (value) {
+            var m = value.match(/^(\d{1,2})(\/|-)?(\d{1,2})(\/|-)?(\d{4})$/);
+            if (m)
+                value = m[5] + '-' + ("00" + m[3]).slice(-2) + '-' + ("00" + m[1]).slice(-2);
+
+            return value;
+        }
+
+        bindDatePicker();
+
+
+
+
+
 
     });
 })(jQuery);

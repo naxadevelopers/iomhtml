@@ -1,4 +1,15 @@
-
+.close-popup{position: absolute;
+top:4px;
+right:4px;
+font-size: 16px;
+color:#333;
+transition:all 0.5s linear;
+cursor: pointer;
+z-index: 3;
+&:hover{
+    color:#000;
+}
+}
 .openSpace_map {
     padding: 0 !important;
 
@@ -284,12 +295,41 @@
                         i {
                             transform: rotate(180deg);
                         }
+                        &.norotation{i{transform: rotate(0deg);}
+                            
+                        }
                     }
                     &:hover {
                         background-color: $color-secondary;
                         color: $color-white;
                     }
+                    &.top43{top:43px;}
                 }
+
+                .sidebar_toggle--tab {
+                    position: absolute;
+                    width: 40px;
+                    height: 40px;
+                    @include flexvr;
+                    background-color: $color-blue;
+                    color: $color-white;
+                    border-radius: 2rem 0 0 2rem;
+                    top: 0;
+                    left: -40px;
+                    z-index: 3;
+                    cursor: pointer;
+
+                   
+                    
+                    &:hover {
+                        background-color: $color-secondary;
+                        color: $color-white;
+                    }
+                    &.top43{top:43px;}
+                }
+
+
+
 
                 .sidebar_wrapper {
                     display: block;
@@ -351,3 +391,23 @@
         }
     }
 }
+ .rtab{display:none;}
+.tab-content.current{display:block;}
+.full-width{width:100%;margin-bottom:30px;}
+h6.nmt{margin-top:0;}
+.filter form label{font-size: 13px;}
+.filter form  .form-control{padding-left: 5px;padding-right:5px;}
+.filter  .select-btn{    
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+   span{
+    background: transparent;
+    border: none;
+    color: #fff;
+   }
+}
+.filter  .input-group-addon{background:#047c41;}
+.openSpace_map .details-wrapper .map-wrapper .right_sidebar .sidebar_toggle--tab.top43 {display:none;}

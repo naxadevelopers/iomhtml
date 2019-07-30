@@ -238,7 +238,7 @@
     
   }
 }
-.contact-page{
+.contact-page ,.filter{
   .contact-header{
     .contact-item{
       @include boxshadow;
@@ -330,6 +330,7 @@
   }
 }
 .accordion-badge{border-radius:2px;padding:3px 5px;font-size:12px; font-weight: normal;}
+.top43 {display:none;}
 @media screen and (max-width:1199px){
   .what_openspace{
     .content_item{
